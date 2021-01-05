@@ -1,27 +1,7 @@
-The PICnc driver requires some setup based on your firmware options.
-
-In /HAL/picnc-5a.h edit the following line:
-"#define NUMAXES"
-
-and make sure it matches the value of "#define MAXGEN" in /firmware/hardware.h
-
-If these missmatch bad things will happen and you may get SPI errors. 
-
 To compile the code and install it in machinekit linuxcnc use the following:
-sudo comp --install picnc-5a.c
+gcc -DRTAPI -I/home/pi/linuxcnc/include picnc-5a.c -shared -mcpu=cortex-a72 -mfloat-abi=hard -mfpu=neon-fp-armv8 -mneon-for-64bits -mtune=cortex-a72 -fPIC -L/home/pi/linuxcnc/lib -o delta-drv.so 
 
 
 in your machine .hal file there are two loadtime options
 
-"loadrt picnc pwmfreq=35000 stepwidth=1"
-
-Above are the defaults 
-
-The first is the pwm base frequency in Hz. Note the higher the frequecy the lower the resolution of the PWM output. 
-The second is the min stepwidth pulse in 25ns steps.
-
-
-
-[TODO add example ini and hal files]
-
-
+"loadrt picnc-5a"
