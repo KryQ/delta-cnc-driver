@@ -1,0 +1,90 @@
+//OUTPUTS
+#define X_STEP_PORT GPIOC
+#define X_STEP_PIN GPIO10
+
+#define X_DIR_PORT GPIOC
+#define X_DIR_PIN GPIO11
+
+#define Y_STEP_PORT GPIOA
+#define Y_STEP_PIN GPIO12
+
+#define Y_DIR_PORT GPIOA
+#define Y_DIR_PIN GPIO15
+
+#define Z_STEP_PORT GPIOA
+#define Z_STEP_PIN GPIO10
+
+#define Z_DIR_PORT GPIOA
+#define Z_DIR_PIN GPIO11
+
+#define A_STEP_PORT GPIOA
+#define A_STEP_PIN GPIO8
+
+#define A_DIR_PORT GPIOA
+#define A_DIR_PIN GPIO9
+
+#define B_STEP_PORT GPIOC
+#define B_STEP_PIN GPIO7
+
+#define B_DIR_PORT GPIOC
+#define B_DIR_PIN GPIO8
+
+#define OUT_1_PORT GPIOB
+#define OUT_1_PIN GPIO12
+
+#define OUT_2_PORT GPIOB
+#define OUT_2_PIN GPIO13
+
+#define OUT_3_PORT GPIOB
+#define OUT_3_PIN GPIO14
+
+#define OUT_4_PORT GPIOB
+#define OUT_4_PIN GPIO15
+
+#define OUT_5_PORT GPIOC
+#define OUT_5_PIN GPIO6
+
+#define LED1_PORT GPIOC
+#define LED1_PIN GPIO12
+
+#define LED2_PORT GPIOD
+#define LED2_PIN GPIO2
+
+#define LED3_PORT GPIOB
+#define LED3_PIN GPIO3
+
+//INPUTS
+#define X_MIN_PORT GPIOC
+#define X_MIN_PIN GPIO14
+
+#define X_MAX_PORT GPIOC
+#define X_MAX_PIN GPIO15
+
+#define Y_MIN_PORT GPIOC
+#define Y_MIN_PIN GPIO0
+
+#define Y_MAX_PORT GPIOC
+#define Y_MAX_PIN GPIO1
+
+#define Z_MIN_PORT GPIOC
+#define Z_MIN_PIN GPIO2
+
+#define Z_MAX_PORT GPIOC
+#define Z_MAX_PIN GPIO3
+
+#define A_MIN_PORT GPIOA
+#define A_MIN_PIN GPIO2
+
+#define A_MAX_PORT GPIOA
+#define A_MAX_PIN GPIO1
+
+#define B_MIN_PORT GPIOA
+#define B_MIN_PIN GPIO0
+
+#define B_MAX_PORT GPIOA
+#define B_MAX_PIN GPIO3
+
+#define SPIBUFSIZE 28
+#define BUFSIZE (SPIBUFSIZE / 4)
+
+#define SPINDLE_READ_DELAY 100
