@@ -419,12 +419,12 @@ void update(void *arg, long period)
 		recip_dt = 1.0 / dt;			 //10000
 	}
 
-	/* set internal accel limit to its absolute max, which is
-		   zero to full speed in one thread period */
-	max_accl = max_vel * recip_dt;
-
 	for (i = 0; i < NUMAXES; i++)
 	{
+		/* set internal accel limit to its absolute max, which is
+		   zero to full speed in one thread period */
+		max_accl = max_vel * recip_dt;
+
 		/* check for user specified accel limit parameter */
 		if (dat->maxaccel[i] <= 0.0)
 		{

@@ -89,8 +89,6 @@ static s32 accum_diff = 0,
 					 old_count[NUMAXES] = {0};
 static s64 accum[NUMAXES] = {0}; /* 64 bit DDS accumulator */
 
-u32 spindle_speed = 0;
-
 static void transfer_spi(void *arg, long period);
 static void update(void *arg, long period);
 static void update_outputs(data_t *dat);
